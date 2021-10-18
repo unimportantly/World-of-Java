@@ -5,15 +5,16 @@
 public class Character {
 
     //attributes
-    private int hp = (int)Math.random()*100;
-    private int damage = (int)Math.random()*10;
+    private int hp;
+    private int damage;
     private String name;
 
     //construtors
     public Character(){}
-    public Character(String name) {
-        this();
+    public Character(int hp, int damage, String name) {
         this.name = name;
+        this.hp = hp;
+        this.damage = damage;
     }
 
     //g&s

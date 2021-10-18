@@ -10,4 +10,14 @@ public class Tools {
         // On recupere son input
         return scan.nextLine();
     }
+    public static int generateRandomDamage() {
+
+        int randomNumber = (int)Math.round(Math.random()*10);
+        return randomNumber;
+    }
+    public static int generateRandomHP() {
+
+        int randomNumber = (int)Math.round(Math.random()*100);
+        return randomNumber;
+    }
 }

@@ -22,3 +22,6 @@ Creation of an abstract fighter class
 
 Creation of a fighter interface
     -> rationalised 
+
+Creation of attack interface & basic attack class
+    -> added different attacks

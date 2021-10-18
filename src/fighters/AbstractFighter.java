@@ -12,11 +12,12 @@ public abstract class AbstractFighter implements Fighter{
     protected int hp;
     protected int damage;
 
-
-
     //constructors
-    public AbstractFighter() {}
+    public AbstractFighter() {
+        super();
+    }
     public AbstractFighter(int hp, int damage, String name){
+        this();
         this.name = name;
         this.damage = damage;
         this.hp = hp;
@@ -41,7 +42,4 @@ public abstract class AbstractFighter implements Fighter{
     }
 
 
-//    public String toString() {
-//        return "name: " + this.name + ", HP: " + this.hp + ", damage: " + this.damage;
-//    }
 }

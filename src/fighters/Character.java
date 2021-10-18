@@ -27,9 +27,7 @@ public class Character extends AbstractFighter{
 
     @Override
     public void setDamage() {
-
     }
-
     public void setDamage(int damage) {
         this.damage = damage;
     }

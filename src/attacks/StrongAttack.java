@@ -2,17 +2,21 @@ package attacks;
 
 import fighters.Fighter;
 
-public class BasicAttack extends AbstractAttack implements Attack {
+public class StrongAttack extends AbstractAttack implements Attack{
 
     //constructors
-    public BasicAttack(){
+    public StrongAttack(){
         super();
     }
-    public BasicAttack(int chanceToHit, int damageModifier) {
+    public StrongAttack(int chanceToHit, int damageModifier) {
         super(chanceToHit, damageModifier);
     }
 
-    //methods
+
+    @Override
+    public int launchAttack(Fighter attacker, Fighter defender) {
+        return 0;
+    }
     @Override
     public String getName() {
         return null;
@@ -27,5 +31,4 @@ public class BasicAttack extends AbstractAttack implements Attack {
     @Override
     public void setDamage(int damage) {
     }
-
 }

@@ -41,5 +41,30 @@ public abstract class AbstractFighter implements Fighter{
         this.setHp(this.getHp() - damage);
     }
 
+    //g&s
+    @Override
+    public String getName() {
+        return name;
+    }
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+    @Override
+    public int getHp() {
+        return hp;
+    }
+    @Override
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+    @Override
+    public int getDamage() {
+        return damage;
+    }
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
 
 }

@@ -12,5 +12,5 @@ public interface Fighter {
     public int getHp();
     public void setHp(int hp);
     public int getDamage();
-    public void setDamage();
+    public void setDamage(int damage);
 }

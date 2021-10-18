@@ -1,20 +1,17 @@
-/**
- * create a character class
- * give it attributes
- */
-public class Character {
+package fighters;
 
-    //attributes
-    private int hp;
-    private int damage;
-    private String name;
+/**
+ * create a character class extending from AbstractFighter
+ */
+
+public class Character extends AbstractFighter{
 
     //construtors
-    public Character(){}
+    public Character(){
+        super();
+    }
     public Character(int hp, int damage, String name) {
-        this.name = name;
-        this.hp = hp;
-        this.damage = damage;
+        super(hp, damage, name);
     }
 
     //g&s

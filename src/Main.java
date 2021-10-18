@@ -1,8 +1,14 @@
+import fighters.Character;
+import fighters.Monster;
+
 public class Main {
 
     public static void main(String[] args){
 
-    Character character = new Character();
-    character = World.characterFactory();
+//    Character character = new Character();
+//    character = World.characterFactory();
+//
+        Monster monster = new Monster();
+        monster = World.monsterFactory();
     }
 }

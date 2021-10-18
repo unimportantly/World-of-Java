@@ -1,3 +1,6 @@
+import fighters.Character;
+import fighters.Monster;
+
 public abstract class World {
 
 /**
@@ -13,10 +16,18 @@ public abstract class World {
      * @return created character
      */
     public static Character characterFactory(){
-    Character character = new Character(Tools.generateRandomHP(), Tools.generateRandomDamage(), Tools.inputString("please enter your character's name"));
+    Character character = new Character(Tools.generateRandomInt(), Tools.generateRandomInt(), Tools.inputString("please enter your character's name"));
         System.out.println(character);
     return character;
 }
+    /**
+     * same as characterFactory but with monsters
+     */
+    public static Monster monsterFactory(){
+        Monster monster = new Monster(Tools.generateRandomInt(), Tools.generateRandomInt(), Tools.generateName());
+        System.out.println(monster);
+        return monster;
+    }
 
     /**
      * class to display the different infos about the world

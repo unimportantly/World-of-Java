@@ -9,3 +9,10 @@ Creation of a character class
 
 Creation of a world class
     -> took the char creation & put it there, added display method for later
+    -> added a generate monster method (with random stats & name)
+
+Creation of a monster class
+    -> inherits from abstractfighter class
+
+Creation of an abstract fighter class
+    -> parent to monster & character

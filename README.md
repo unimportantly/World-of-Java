@@ -18,3 +18,7 @@ Creation of a monster class
 
 Creation of an abstract fighter class
     -> parent to monster & character
+    -> made the combat interface more efficient 
+
+Creation of a fighter interface
+    -> rationalised 

@@ -1,4 +1,5 @@
 import fighters.Character;
+import fighters.Fighter;
 import fighters.Monster;
 
 public abstract class World {
@@ -13,49 +14,48 @@ public abstract class World {
      * class to emulate character creation
      * atk & hp are randomized because people cheat
      * name is user-input
+     *
      * @return created character
      */
-    public static Character characterFactory(){
-    Character character = new Character(Tools.generateRandomInt() +100, Tools.generateRandomInt(), Tools.inputString("please enter your character's name"));
+    public static Character characterFactory() {
+        Character character = new Character(Tools.generateRandomInt() + 100, Tools.generateRandomInt(), Tools.inputString("please enter your character's name"));
         System.out.println(character);
-    return character;
-}
+        return character;
+    }
+
     /**
      * same as characterFactory but with monsters
      */
-    public static Monster monsterFactory(){
-        Monster monster = new Monster(Tools.generateRandomInt() +100, Tools.generateRandomInt(), Tools.generateName());
+    public static Monster monsterFactory() {
+        Monster monster = new Monster(Tools.generateRandomInt() + 100, Tools.generateRandomInt(), Tools.generateName());
         System.out.println(monster);
         return monster;
     }
 
     /**
      * class to display the different infos about the world
-     *
      */
-    public static void displayInformation(){}
+    public static void displayInformation() {
+    }
 
     /**
      * create a method to have the chars & monsters fight
      * one after the other until one dies
-     * @param character & monster
-     *
+     * @param fighter1 & fighter2 & etc?
      */
-    public static void fight(Character character, Monster monster){
-
-        while (character.getHp() > 0 && monster.getHp() > 0){
-            monster.setHp(monster.getHp() - character.getDamage());
-            System.out.println(character.getName() + "'s attack hit " + monster.getName() + " for " + character.getDamage() + " points. " + monster.getName() + " has " + monster.getHp() + " left.");
-            if (monster.getHp() <= 0) {
-                System.out.println(monster.getName() + " is dead!");
-            }
-            else {
-                character.setHp(character.getHp() - monster.getDamage());
-                System.out.println(monster.getName() + "'s attack hit " + character.getName() + " for " + monster.getDamage() + " points. " + character.getName() + " has " + character.getHp() + " left.");
-                if (character.getHp() <= 0) {
-                    System.out.println(character.getName() + " is dead!");
+    public static void fight(Fighter fighter1, Fighter fighter2) {
+        while (fighter1.getHp() > 0 && fighter2.getHp() > 0) {
+            fighter1.attack(fighter2);
+            if (fighter2.getHp() > 0) {
+                fighter2.attack(fighter1);
+                if (fighter1.getHp() < 0) {
+                    System.out.println(fighter1.getName() + " is dead!");
+                    break;
                 }
+            } else {
+                System.out.println(fighter2.getName() + " is dead!");
             }
+
         }
     }
 }

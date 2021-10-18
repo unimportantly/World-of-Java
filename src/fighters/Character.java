@@ -24,6 +24,12 @@ public class Character extends AbstractFighter{
     public int getDamage() {
         return damage;
     }
+
+    @Override
+    public void setDamage() {
+
+    }
+
     public void setDamage(int damage) {
         this.damage = damage;
     }

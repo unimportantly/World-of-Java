@@ -1,16 +1,8 @@
-# Exercices supplémentaires
+# World of Java
 
-POO sur java
+Create a WOW-type game in java utilizing all we've learned up til now.
 
-## exo 1
+## Walkthrough
 
-travail sur l'héritage
-
-## exo 2
-
-travail sur l'héritage, les interfaces, les exceptions à travers une création de banque qui contient :
-- des clients
-- des comptes (simples, rémunérés ou à seuil)
-- des interfaces pour les régir 
-
-fait par moi ~~
+Creation of a character class
+    -> character creation, randomized stats, user input for the name

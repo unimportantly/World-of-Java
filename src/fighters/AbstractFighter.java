@@ -1,5 +1,7 @@
 package fighters;
 
+import attacks.AbstractAttack;
+
 /**
  * creates an abstract parent class for fighters in WOJ
  * attr & constructors & getters & setters.

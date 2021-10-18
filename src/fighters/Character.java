@@ -1,17 +1,23 @@
 package fighters;
 
+import classes.Class;
+
 /**
  * create a character class extending from AbstractFighter
  */
 
 public class Character extends AbstractFighter{
 
+    //attributes
+    Class aClass;
+
     //construtors
     public Character(){
         super();
     }
-    public Character(int hp, int damage, String name) {
+    public Character(int hp, int damage, String name, Class aClass) {
         super(hp, damage, name);
+        this.aClass = aClass;
     }
 
     //g&s

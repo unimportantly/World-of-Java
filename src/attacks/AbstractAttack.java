@@ -1,6 +1,7 @@
 package attacks;
 
 import fighters.Fighter;
+import global.Tools;
 
 public abstract class AbstractAttack implements Attack{
 
@@ -29,7 +30,7 @@ public abstract class AbstractAttack implements Attack{
      */
     public int launchAttack(Fighter attacker, Fighter defender) {
         int damage = 0;
-        if (chanceToHit > (int)Math.round(Math.random()*100)){
+        if (chanceToHit > Tools.generateRandomInt()){
             System.out.println("The attack lands!");
             damage = (int)Math.round(attacker.getDamage() * damageModifier);
         } else{

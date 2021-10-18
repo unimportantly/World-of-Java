@@ -1,7 +1,9 @@
+package global;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Tools {
 
@@ -33,5 +35,11 @@ public class Tools {
         lastPartList.toArray(lastPart);
         String monsterName = lastPart[0] + " " + firstPart[0];
         return monsterName;
+    }
+    //generaterandom
+    public static int generateRandom(int min, int max) {
+
+        int randomNumber = (ThreadLocalRandom.current().nextInt(max - min + 1)) + 1;
+        return randomNumber;
     }
 }

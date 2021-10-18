@@ -5,10 +5,6 @@ public class Main {
 
     public static void main(String[] args){
 
-//    Character character = new Character();
-//    character = World.characterFactory();
-//
-        Monster monster = new Monster();
-        monster = World.monsterFactory();
+World.fight(World.characterFactory(), World.monsterFactory());
     }
 }

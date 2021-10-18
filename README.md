@@ -10,6 +10,8 @@ Creation of a character class
 Creation of a world class
     -> took the char creation & put it there, added display method for later
     -> added a generate monster method (with random stats & name)
+    -> added a fight method
+    -> adjusted the HP & dmg values to make it more interesting
 
 Creation of a monster class
     -> inherits from abstractfighter class

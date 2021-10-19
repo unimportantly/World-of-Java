@@ -3,10 +3,6 @@ import fighters.Character;
 import fighters.Fighter;
 import fighters.Monster;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public abstract class World {
 
 /**
@@ -23,7 +19,7 @@ public abstract class World {
      * @return created character
      */
     public static Character characterFactory() {
-        Character character = new Character(Tools.generateRandomInt() + 100, Tools.generateRandomInt(), Tools.inputString("please enter your character's name"),  );
+        Character character = new Character(Tools.generateRandomInt() + 100, Tools.generateRandomInt() + 50, Tools.generateRandomInt(),Tools.inputString("please enter your character's name"), Tools.choseClass());
         System.out.println(character);
         return character;
     }

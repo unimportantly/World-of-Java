@@ -1,6 +1,6 @@
 package fighters;
 
-import attacks.AbstractAttack;
+import classes.Classable;
 
 /**
  * creates an abstract parent class for fighters in WOJ
@@ -10,9 +10,9 @@ import attacks.AbstractAttack;
 public abstract class AbstractFighter implements Fighter{
 
     //attributes
-    protected String name;
     protected int hp;
     protected int damage;
+    protected String name;
 
     //constructors
     public AbstractFighter() {
@@ -20,9 +20,9 @@ public abstract class AbstractFighter implements Fighter{
     }
     public AbstractFighter(int hp, int damage, String name){
         this();
-        this.name = name;
-        this.damage = damage;
         this.hp = hp;
+        this.damage = damage;
+        this.name = name;
     }
 
     //methods
@@ -44,29 +44,22 @@ public abstract class AbstractFighter implements Fighter{
     }
 
     //g&s
-    @Override
     public String getName() {
         return name;
     }
-    @Override
     public void setName(String name) {
         this.name = name;
     }
-    @Override
     public int getHp() {
         return hp;
     }
-    @Override
     public void setHp(int hp) {
         this.hp = hp;
     }
-    @Override
     public int getDamage() {
         return damage;
     }
     public void setDamage(int damage) {
         this.damage = damage;
     }
-
-
 }

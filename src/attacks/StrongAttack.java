@@ -1,34 +1,29 @@
 package attacks;
 
+import classes.Warrior;
 import fighters.Fighter;
 
-public class StrongAttack extends AbstractAttack implements Attack{
+public class StrongAttack extends MeleeAttack {
+
+    //attributes
 
     //constructors
-    public StrongAttack(){
-        super();
+    public StrongAttack() {
+        this.chanceToHit = 60;
+        this.damageModifier = 120;
+        this.mpCost = 20;
     }
-    public StrongAttack(int chanceToHit, int damageModifier) {
-        super(chanceToHit, damageModifier);
-    }
+    //methods
+
+    //g&s
 
 
     @Override
-    public int launchAttack(Fighter attacker, Fighter defender) {
-        return 0;
-    }
-    @Override
-    public String getName() {
-        return null;
-    }
-    @Override
-    public void setName(String name) {
-    }
-    @Override
-    public int getDamage() {
-        return 0;
-    }
-    @Override
-    public void setDamage(int damage) {
+    public String toString() {
+        return "ShieldBash{" +
+                "chanceToHit=" + chanceToHit +
+                ", damageModifier=" + damageModifier +
+                ", mpCost=" + mpCost +
+                '}';
     }
 }

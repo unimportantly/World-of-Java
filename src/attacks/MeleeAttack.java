@@ -1,21 +1,18 @@
 package attacks;
 
+import fighters.Fighter;
 import global.Tools;
 
-public abstract class AbstractAttack{
+public abstract class MeleeAttack implements Attack{
 
     //attributes
     protected int chanceToHit;
     protected int damageModifier;
+    protected int mpCost;
 
     //constructors
-    public AbstractAttack(){
+    public MeleeAttack(){
         super();
-    }
-    public AbstractAttack(int chanceToHit, int damageModifier) {
-        super();
-        this.chanceToHit = chanceToHit;
-        this.damageModifier = damageModifier;
     }
 
     //methods
@@ -32,11 +29,43 @@ public abstract class AbstractAttack{
         if (chanceToHit > Tools.generateRandomInt()){
             System.out.println("The attack lands!");
             damage = (int)Math.round(attacker.getDamage() * damageModifier);
+
         } else{
             System.out.println("The attack was evaded!");
         }
         return damage;
     }
 
+    //g&s
+    public int getChanceToHit() {
+        return chanceToHit;
+    }
+    public void setChanceToHit(int chanceToHit) {
+        this.chanceToHit = chanceToHit;
+    }
+    @Override
+    public int getDamageModifier() {
+        return damageModifier;
+    }
+    @Override
+    public void setDamageModifier(int damageModifier) {
+        this.damageModifier = damageModifier;
+    }
+    @Override
+    public int getMpCost() {
+        return mpCost;
+    }
+    @Override
+    public void setMpCost(int mpCost) {
+        this.mpCost = mpCost;
+    }
 
+    @Override
+    public String toString() {
+        return "MeleeAttack{" +
+                "chanceToHit=" + chanceToHit +
+                ", damageModifier=" + damageModifier +
+                ", mpCost=" + mpCost +
+                '}';
+    }
 }

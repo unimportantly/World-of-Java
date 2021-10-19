@@ -1,6 +1,6 @@
 package fighters;
 
-import classes.Class;
+import classes.Classable;
 
 /**
  * create a character class extending from AbstractFighter
@@ -9,35 +9,27 @@ import classes.Class;
 public class Character extends AbstractFighter{
 
     //attributes
-    Class aClass;
+    private int mp;
+    Classable aClass;
 
-    //construtors
-    public Character(){
-        super();
-    }
-    public Character(int hp, int damage, String name, Class aClass) {
+    //constructor
+    public Character(int hp, int mp, int damage, String name, Classable aClass) {
         super(hp, damage, name);
+        this.mp = mp;
         this.aClass = aClass;
     }
 
+    //methods
+    @Override
+    public void attack(Fighter opponent) {
+    }
+
     //g&s
-    public int getHp() {
-        return hp;
+    public Classable getAClass() {
+        return aClass;
     }
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-    public int getDamage() {
-        return damage;
-    }
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
+    public void setAClass(Classable aClass) {
+        this.aClass = aClass;
     }
 
     @Override

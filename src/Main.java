@@ -1,5 +1,5 @@
-import fighters.Character;
-import fighters.Monster;
+
+import global.World;
 
 public class Main {
 

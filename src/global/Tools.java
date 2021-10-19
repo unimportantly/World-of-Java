@@ -1,8 +1,7 @@
 package global;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import classes.*;
+
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Tools {
@@ -41,5 +40,28 @@ public class Tools {
 
         int randomNumber = (ThreadLocalRandom.current().nextInt(max - min + 1)) + 1;
         return randomNumber;
+    }
+
+    //chose a class
+
+    /**
+     * asks the user to pick from 4 classes
+     * @return the class picked
+     */
+    public static Classable choseClass() {
+        Classable chosenClass = null;
+        String classPick = Tools.inputString("Please pick a class between warrior, mage, thief and priest");
+        if (classPick.toLowerCase(Locale.ROOT).equals("warrior")) {
+            chosenClass = new Warrior();
+        } else if (classPick.toLowerCase(Locale.ROOT).equals("thief")) {
+            chosenClass = new Thief();
+        } else if (classPick.toLowerCase(Locale.ROOT).equals("mage")) {
+            chosenClass = new Mage();
+        } else if (classPick.toLowerCase(Locale.ROOT).equals("priest")) {
+            chosenClass = new Priest();
+        } else {
+            System.out.println("Please pick one of the classes provided");
+        }
+        return chosenClass;
     }
 }

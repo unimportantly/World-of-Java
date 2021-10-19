@@ -18,7 +18,7 @@ public class SneakAttack extends MeleeAttack{
 
     @Override
     public String toString() {
-        return "ShieldBash{" +
+        return "SneakAttack{" +
                 "chanceToHit=" + chanceToHit +
                 ", damageModifier=" + damageModifier +
                 ", mpCost=" + mpCost +

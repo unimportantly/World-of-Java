@@ -21,10 +21,9 @@ public abstract class MeleeAttack implements Attack{
      * resolve if the attack has hit
      * if it has, calculate the damage
      * @param attacker the one who launches the attack
-     * @param defender the one who it is launched at
      * @return damage done
      */
-    public int launchAttack(Fighter attacker, Fighter defender) {
+    public int launchAttack(Fighter attacker) {
         int damage = 0;
         if (chanceToHit > Tools.generateRandomInt()){
             System.out.println("The attack lands!");

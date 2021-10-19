@@ -6,6 +6,7 @@ import fighters.Fighter;
 public interface Classable {
 
     //methods
+    public Attack getAttack();
     public void attack(Fighter opponent);
     public void defend(int damage);
 

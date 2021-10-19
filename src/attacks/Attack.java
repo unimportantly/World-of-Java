@@ -4,7 +4,7 @@ import fighters.Fighter;
 
 public interface Attack {
 
-    public int launchAttack(Fighter attacker, Fighter defender);
+    public int launchAttack(Fighter attacker);
 
     public int getDamageModifier();
     public void setDamageModifier(int damageModifier);

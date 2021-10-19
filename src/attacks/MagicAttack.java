@@ -18,10 +18,9 @@ public abstract class MagicAttack implements Attack{
     /**
      * calculates the damage dealt & additional effects if applicable
      * @param attacker the one who launches the attack
-     * @param defender the one who it is launched at
      * @return damage done
      */
-    public int launchAttack(Fighter attacker, Fighter defender) {
+    public int launchAttack(Fighter attacker) {
         int damage = (int)Math.round(attacker.getDamage() * damageModifier);
         return damage;
     }

@@ -20,9 +20,11 @@ public class Character extends AbstractFighter{
     }
 
     //methods
-    @Override
-    public void attack(Fighter opponent) {
+    public void attack(Fighter attacker, Fighter opponent) {
+        opponent.defend( this.aClass.getAttack().launchAttack(attacker));
+        System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
     }
+
 
     //g&s
     public Classable getAClass() {
@@ -34,6 +36,12 @@ public class Character extends AbstractFighter{
 
     @Override
     public String toString() {
-        return "name: " + this.name + ", HP: " + this.hp + ", damage: " + this.damage;
+        return "Character{" +
+                "hp=" + hp +
+                ", damage=" + damage +
+                ", name='" + name + '\'' +
+                ", mp=" + mp +
+                ", aClass=" + aClass +
+                '}';
     }
 }

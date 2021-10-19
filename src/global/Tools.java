@@ -50,17 +50,23 @@ public class Tools {
      */
     public static Classable choseClass() {
         Classable chosenClass = null;
-        String classPick = Tools.inputString("Please pick a class between warrior, mage, thief and priest");
-        if (classPick.toLowerCase(Locale.ROOT).equals("warrior")) {
-            chosenClass = new Warrior();
-        } else if (classPick.toLowerCase(Locale.ROOT).equals("thief")) {
-            chosenClass = new Thief();
-        } else if (classPick.toLowerCase(Locale.ROOT).equals("mage")) {
-            chosenClass = new Mage();
-        } else if (classPick.toLowerCase(Locale.ROOT).equals("priest")) {
-            chosenClass = new Priest();
-        } else {
-            System.out.println("Please pick one of the classes provided");
+        while (chosenClass == null) {
+            String classPick = Tools.inputString("Please pick a class between warrior, mage, thief and priest");
+            if (classPick.toLowerCase(Locale.ROOT).equals("warrior")) {
+                chosenClass = new Warrior();
+                System.out.println("You have chosen to be a warrior!");
+            } else if (classPick.toLowerCase(Locale.ROOT).equals("thief")) {
+                chosenClass = new Thief();
+                System.out.println("You have chosen to be a thief!");
+            } else if (classPick.toLowerCase(Locale.ROOT).equals("mage")) {
+                chosenClass = new Mage();
+                System.out.println("You have chosen to be a mage!");
+            } else if (classPick.toLowerCase(Locale.ROOT).equals("priest")) {
+                chosenClass = new Priest();
+                System.out.println("You have chosen to be a priest!");
+            } else {
+                System.out.println("Please pick one of the classes provided");
+            }
         }
         return chosenClass;
     }

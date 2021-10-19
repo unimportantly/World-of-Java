@@ -8,15 +8,15 @@ import java.util.Arrays;
 public class Thief extends MeleeClass {
 
     //attributes
-    private Attack[] attacks = {new BasicAttack(), new PoisonedAttack(), new SneakAttack()};
+    private Attack[] thiefAttacks = {new BasicAttack(), new PoisonedAttack(), new SneakAttack()};
 
     //constructors
     public Thief() {
         super();
     }
-    public Thief(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] attacks) {
+    public Thief(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] thiefAttacks) {
         super(chanceToHitModifier, mpModifier, hpModifier);
-        this.attacks = attacks;
+        this.thiefAttacks = thiefAttacks;
     }
 
     //methods
@@ -27,11 +27,10 @@ public class Thief extends MeleeClass {
     public void defend(int damage) {
     }
 
-
     @Override
     public String toString() {
         return "Thief{" +
-                "attacks=" + Arrays.toString(attacks) +
+                "thiefAttacks=" + Arrays.toString(thiefAttacks) +
                 '}';
     }
 }

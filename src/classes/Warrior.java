@@ -3,18 +3,20 @@ package classes;
 import attacks.*;
 import fighters.Fighter;
 
+import java.util.Arrays;
+
 public class Warrior extends MeleeClass implements Classable {
 
     //attributes
-    private Attack[] attacks = {new BasicAttack(), new StrongAttack(), new ShieldBash()};
+    private Attack[] warriorAttacks = {new BasicAttack(), new StrongAttack(), new ShieldBash()};
 
     //constructors
     public Warrior() {
         super();
     }
-    public Warrior(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] attacks) {
+    public Warrior(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] warriorAttacks) {
         super(chanceToHitModifier, mpModifier, hpModifier);
-        this.attacks = attacks;
+        this.warriorAttacks = warriorAttacks;
     }
     //methods
     @Override
@@ -26,4 +28,11 @@ public class Warrior extends MeleeClass implements Classable {
 
     //g&s
 
+
+    @Override
+    public String toString() {
+        return "Warrior{" +
+                "warriorAttacks=" + Arrays.toString(warriorAttacks) +
+                '}';
+    }
 }

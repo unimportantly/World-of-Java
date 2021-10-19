@@ -14,15 +14,15 @@ import java.util.Map;
 public class Priest extends MagicClass{
 
     //attributes
-    private Attack[] attacks = {new BasicAttack(), new HolySpell(), new Heal()};
+    private Attack[] priestAttacks = {new BasicAttack(), new HolySpell(), new Heal()};
 
     //constructors
     public Priest() {
         super();
     }
-    public Priest(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] attacks) {
+    public Priest(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] priestAttacks) {
         super(chanceToHitModifier, mpModifier, hpModifier);
-        this.attacks = attacks;
+        this.priestAttacks = priestAttacks;
     }
 
     //methods
@@ -39,7 +39,7 @@ public class Priest extends MagicClass{
     @Override
     public String toString() {
         return "Priest{" +
-                "attacks=" + Arrays.toString(attacks) +
+                "attacks=" + Arrays.toString(priestAttacks) +
                 '}';
     }
 }

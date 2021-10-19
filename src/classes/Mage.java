@@ -8,15 +8,15 @@ import java.util.Arrays;
 public class Mage extends MagicClass {
 
     //attributes
-    private Attack[] attacks = {new BasicAttack(), new ElementalSpell(), new Ultima()};
+    private Attack[] mageAttacks = {new BasicAttack(), new ElementalSpell(), new Ultima()};
 
     //constructors
     public Mage() {
         super();
     }
-    public Mage(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] attacks) {
+    public Mage(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] mageAttacks) {
         super(chanceToHitModifier, mpModifier, hpModifier);
-        this.attacks = attacks;
+        this.mageAttacks = mageAttacks;
     }
     //methods
     @Override
@@ -32,7 +32,7 @@ public class Mage extends MagicClass {
     @Override
     public String toString() {
         return "Mage{" +
-                "attacks=" + Arrays.toString(attacks) +
+                "attacks=" + Arrays.toString(mageAttacks) +
                 '}';
     }
 }

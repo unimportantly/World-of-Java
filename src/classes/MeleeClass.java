@@ -1,6 +1,5 @@
 package classes;
 
-import attacks.Attack;
 import global.Tools;
 
 public abstract class Class {

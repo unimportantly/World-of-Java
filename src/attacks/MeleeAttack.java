@@ -1,9 +1,8 @@
 package attacks;
 
-import fighters.Fighter;
 import global.Tools;
 
-public abstract class AbstractAttack implements Attack{
+public abstract class AbstractAttack{
 
     //attributes
     protected int chanceToHit;

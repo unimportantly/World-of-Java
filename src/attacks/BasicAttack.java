@@ -18,7 +18,7 @@ public class BasicAttack implements Attack {
 
     //methods
     public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * damageModifier);
+        int damage = (int)Math.round(attacker.getDamage() * damageModifier / 100);
         return damage;
     }
 

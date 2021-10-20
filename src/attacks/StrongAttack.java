@@ -20,7 +20,7 @@ public class StrongAttack extends MeleeAttack {
 
     @Override
     public String toString() {
-        return "ShieldBash{" +
+        return "StrongAttack{" +
                 "chanceToHit=" + chanceToHit +
                 ", damageModifier=" + damageModifier +
                 ", mpCost=" + mpCost +

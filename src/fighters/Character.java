@@ -21,8 +21,9 @@ public class Character extends AbstractFighter{
 
     //methods
     public void attack(Fighter attacker, Fighter opponent) {
-        opponent.defend( this.aClass.getAttack().launchAttack(attacker));
+        opponent.defend(this.aClass.getAttack().launchAttack(attacker));
         System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
+        System.out.println(attacker);
     }
 
 

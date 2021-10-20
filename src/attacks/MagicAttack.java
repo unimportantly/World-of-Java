@@ -1,5 +1,6 @@
 package attacks;
 
+import fighters.Character;
 import fighters.Fighter;
 import global.Tools;
 
@@ -21,7 +22,8 @@ public abstract class MagicAttack implements Attack{
      * @return damage done
      */
     public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * damageModifier);
+        int damage = (int)Math.round(attacker.getDamage() * damageModifier / 100);
+        
         return damage;
     }
 

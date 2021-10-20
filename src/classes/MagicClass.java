@@ -21,7 +21,7 @@ public abstract class MagicClass implements Classable {
 
     //methods
     public Attack getAttack(){
-        int index = Tools.generateRandom(1,3);
+        int index = Tools.generateRandom(1,this.attacks.length);
         Attack attack = this.attacks[index];
         System.out.println(this.attacks[index]);
         return attack;

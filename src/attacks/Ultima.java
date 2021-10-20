@@ -12,17 +12,12 @@ public class Ultima extends MagicAttack{
         this.mpCost = 100;
     }
     //methods
-    public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
-
-        return damage;
-    }
 
     @Override
     public String toString() {
-        return "Ultima{" +
-                "damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.replace(0,12, "Ultima : ");
+        return sb.toString();
     }
 }

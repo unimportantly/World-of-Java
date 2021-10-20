@@ -15,26 +15,14 @@ public class PoisonedAttack extends MeleeAttack{
     }
     //methods
     //TODO implement DoT
-    public int launchAttack(Fighter attacker) {
-        int damage = 0;
-        if (chanceToHit > Tools.generateRandomInt()){
-            System.out.println("The attack lands!");
-            damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
-        } else{
-            System.out.println("The attack was evaded!");
-            damage = 0;
-        }
-        return damage;
-    }
     //g&s
 
 
     @Override
     public String toString() {
-        return "PoisonedAttack{" +
-                "chanceToHit=" + chanceToHit +
-                ", damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.replace(0,12, "Poisoned attack : ");
+        return sb.toString();
     }
 }

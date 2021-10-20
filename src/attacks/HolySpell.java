@@ -12,17 +12,12 @@ public class HolySpell extends MagicAttack{
         this.mpCost = 50;
     }
     //methods
-    public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
-
-        return damage;
-    }
 
     @Override
     public String toString() {
-        return "HolySpell{" +
-                "damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.replace(0,12, "Holy spell : ");
+        return sb.toString();
     }
 }

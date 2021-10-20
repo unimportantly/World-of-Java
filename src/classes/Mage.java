@@ -36,9 +36,10 @@ public class Mage extends MagicClass {
 
     @Override
     public String toString() {
-        return "Mage{" +
-                "attacks=" + Arrays.toString(attacks) +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(". Mage's attacks: " + Arrays.toString(attacks));
+        return sb.toString();
     }
 
 }

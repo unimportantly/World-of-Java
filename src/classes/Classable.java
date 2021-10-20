@@ -17,4 +17,5 @@ public interface Classable {
     public void setMpModifier(int mpModifier);
     public Attack[] getAttacks();
     public void setAttacks(Attack[] attacks);
+    public String toString();
 }

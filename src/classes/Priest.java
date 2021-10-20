@@ -38,8 +38,9 @@ public class Priest extends MagicClass{
 
     @Override
     public String toString() {
-        return "Priest{" +
-                "attacks=" + Arrays.toString(attacks) +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(". Priest's attacks: " + Arrays.toString(attacks));
+        return sb.toString();
     }
 }

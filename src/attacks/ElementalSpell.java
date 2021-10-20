@@ -12,19 +12,15 @@ public class ElementalSpell extends MagicAttack{
         this.mpCost = 50;
     }
     //methods
-    public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
 
-        return damage;
-    }
     //g&s
 
 
     @Override
     public String toString() {
-        return "ElementalSpell{" +
-                "damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.replace(0,12, "Elemental spell : ");
+        return sb.toString();
     }
 }

@@ -20,15 +20,14 @@ public class BasicAttack implements Attack {
     //methods
     public int launchAttack(Fighter attacker) {
         int damage = 0;
-        if (chanceToHit > Tools.generateRandomInt()){
-            System.out.println("The attack lands!");
-            damage = (attacker.getDamage() * this.damageModifier / 100);
-        } else{
-            System.out.println("The attack was evaded!");
-            damage = 0;
+            if (chanceToHit > Tools.generateRandomInt()) {
+                System.out.println("The attack lands!");
+                damage = (attacker.getDamage() * this.damageModifier / 100);
+            } else {
+                System.out.println("The attack was evaded!");
+                damage = 0;
+            }return damage;
         }
-        return damage;
-    }
 
     //g&s
     public int getChanceToHit() {
@@ -57,10 +56,9 @@ public class BasicAttack implements Attack {
 
     @Override
     public String toString() {
-        return "BasicAttack{" +
-                "chanceToHit=" + chanceToHit +
-                ", damageModifier=" + damageModifier +
-                '}';
+        return "BasicAttack: " +
+                "chanceToHit: " + chanceToHit +
+                ", damageModifier: " + damageModifier;
     }
 
 }

@@ -56,10 +56,9 @@ public abstract class MagicClass implements Classable {
 
     @Override
     public String toString() {
-        return "MagicClass{" +
-                "chanceToHitModifier=" + chanceToHitModifier +
-                ", mpModifier=" + mpModifier +
-                ", hpModifier=" + hpModifier +
-                '}';
+        return "MagicClass: " +
+                "chanceToHitModifier: " + chanceToHitModifier +
+                ", mpModifier: " + mpModifier +
+                ", hpModifier: " + hpModifier;
     }
 }

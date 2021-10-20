@@ -27,7 +27,7 @@ public abstract class MeleeAttack implements Attack{
         int damage = 0;
         if (chanceToHit > Tools.generateRandomInt()){
             System.out.println("The attack lands!");
-            damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
+            damage = (attacker.getDamage() * this.damageModifier / 100);
 
         } else{
             System.out.println("The attack was evaded!");
@@ -62,10 +62,9 @@ public abstract class MeleeAttack implements Attack{
 
     @Override
     public String toString() {
-        return "MeleeAttack{" +
-                "chanceToHit=" + chanceToHit +
-                ", damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        return "BasicAttack: " +
+                "chanceToHit: " + chanceToHit +
+                ", damageModifier: " + damageModifier +
+                ", mpCost: " + mpCost;
     }
 }

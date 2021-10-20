@@ -30,9 +30,10 @@ public class Thief extends MeleeClass {
 
     @Override
     public String toString() {
-        return "Thief{" +
-                "thiefAttacks=" + Arrays.toString(attacks) +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(". Thief's attacks: " + Arrays.toString(attacks));
+        return sb.toString();
     }
 
 }

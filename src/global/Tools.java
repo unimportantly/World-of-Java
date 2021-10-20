@@ -68,6 +68,7 @@ public class Tools {
                 System.out.println("Please pick one of the classes provided");
             }
         }
+        System.out.println(chosenClass.toString());
         return chosenClass;
     }
 }

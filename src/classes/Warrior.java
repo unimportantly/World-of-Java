@@ -32,9 +32,10 @@ public class Warrior extends MeleeClass implements Classable {
 
     @Override
     public String toString() {
-        return " Warrior{" +
-                " warriorAttacks =" + Arrays.toString(attacks) +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(". Warrior's attacks: " + Arrays.toString(attacks));
+        return sb.toString();
     }
 
 }

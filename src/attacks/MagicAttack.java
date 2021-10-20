@@ -22,8 +22,7 @@ public abstract class MagicAttack implements Attack{
      * @return damage done
      */
     public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
-
+        int damage = (attacker.getDamage() * this.damageModifier / 100);
         return damage;
     }
 
@@ -47,9 +46,8 @@ public abstract class MagicAttack implements Attack{
 
     @Override
     public String toString() {
-        return "MagicAttack{" +
-                "damageModifier=" + damageModifier +
-                ", mpCost=" + mpCost +
-                '}';
+        return "MagicAttack: " +
+                "damageModifier: " + damageModifier +
+                ", mpCost: " + mpCost;
     }
 }

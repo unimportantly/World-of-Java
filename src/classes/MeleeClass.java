@@ -60,10 +60,9 @@ public abstract class MeleeClass implements Classable {
 
     @Override
     public String toString() {
-        return "MeleeClass{" +
-                "chanceToHitModifier=" + chanceToHitModifier +
-                ", mpModifier=" + mpModifier +
-                ", hpModifier=" + hpModifier +
-                '}';
+        return "MagicClass: " +
+                "chanceToHitModifier: " + chanceToHitModifier +
+                ", mpModifier: " + mpModifier +
+                ", hpModifier: " + hpModifier;
     }
 }

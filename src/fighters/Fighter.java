@@ -3,7 +3,7 @@ package fighters;
 public interface Fighter {
 
     //methods
-    public void attack(Fighter opponent);
+    public void attack(Fighter attacker, Fighter opponent);
     public void defend(int damage);
 
     //g&s

@@ -19,15 +19,14 @@ public class Mage extends MagicClass {
         this.mageAttacks = mageAttacks;
     }
     //methods
-    @Override
-    public void attack(Fighter opponent) {
-    }
-    @Override
-    public void defend(int damage) {
-    }
 
     //g&s
-
+    public Attack[] getMageAttacks() {
+        return mageAttacks;
+    }
+    public void setMageAttacks(Attack[] mageAttacks) {
+        this.mageAttacks = mageAttacks;
+    }
 
     @Override
     public String toString() {

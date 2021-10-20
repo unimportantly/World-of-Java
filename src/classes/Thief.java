@@ -20,12 +20,6 @@ public class Thief extends MeleeClass {
     }
 
     //methods
-    @Override
-    public void attack(Fighter opponent) {
-    }
-    @Override
-    public void defend(int damage) {
-    }
 
     @Override
     public String toString() {

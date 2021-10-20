@@ -46,9 +46,9 @@ public abstract class World {
      */
     public static void fight(Fighter fighter1, Fighter fighter2) {
         while (fighter1.getHp() > 0 && fighter2.getHp() > 0) {
-            fighter1.attack(fighter2);
+            fighter1.attack(fighter1, fighter2);
             if (fighter2.getHp() > 0) {
-                fighter2.attack(fighter1);
+                fighter2.attack(fighter2, fighter1);
                 if (fighter1.getHp() < 0) {
                     System.out.println(fighter1.getName() + " is dead!");
                     break;
@@ -56,7 +56,6 @@ public abstract class World {
             } else {
                 System.out.println(fighter2.getName() + " is dead!");
             }
-
         }
     }
 }

@@ -14,13 +14,14 @@ public class Monster extends AbstractFighter{
     }
 
     //methods
-    @Override
-    public void attack(Fighter opponent) {
-    }
 
     @Override
     public String toString() {
         return "name: " + this.name + ", HP: " + this.hp + ", damage: " + this.damage;
     }
 
+    @Override
+    public void attack(Fighter attacker, Fighter opponent) {
+
+    }
 }

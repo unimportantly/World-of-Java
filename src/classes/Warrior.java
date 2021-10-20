@@ -19,12 +19,6 @@ public class Warrior extends MeleeClass implements Classable {
         this.warriorAttacks = warriorAttacks;
     }
     //methods
-    @Override
-    public void attack(Fighter opponent) {
-    }
-    @Override
-    public void defend(int damage) {
-    }
 
     //g&s
 

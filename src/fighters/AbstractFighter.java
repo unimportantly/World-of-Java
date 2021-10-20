@@ -30,7 +30,7 @@ public abstract class AbstractFighter implements Fighter{
      * attack an opponent & prints the results
      * @param opponent
      */
-    public void attack(Fighter opponent){
+    public void attack(Fighter attacker, Fighter opponent){
             opponent.defend(this.getDamage());
                 System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
         }

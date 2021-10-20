@@ -29,9 +29,8 @@ public class Priest extends MagicClass{
     //methods
     @Override
     public Attack getAttack(){
-        int index = Tools.generateRandom(1,this.attacks.length - 1);
+        int index = Tools.generateRandom(0,this.attacks.length - 1);
         Attack attack = this.attacks[index];
-        System.out.println(attack);
         return attack;
     }
     //g&s

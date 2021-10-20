@@ -27,10 +27,11 @@ public abstract class MeleeAttack implements Attack{
         int damage = 0;
         if (chanceToHit > Tools.generateRandomInt()){
             System.out.println("The attack lands!");
-            damage = (int)Math.round(attacker.getDamage() * damageModifier / 100);
+            damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
 
         } else{
             System.out.println("The attack was evaded!");
+            damage = 0;
         }
         return damage;
     }

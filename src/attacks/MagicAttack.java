@@ -22,8 +22,8 @@ public abstract class MagicAttack implements Attack{
      * @return damage done
      */
     public int launchAttack(Fighter attacker) {
-        int damage = (int)Math.round(attacker.getDamage() * damageModifier / 100);
-        
+        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
+
         return damage;
     }
 

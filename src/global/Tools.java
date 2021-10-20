@@ -38,7 +38,7 @@ public class Tools {
     //generaterandom
     public static int generateRandom(int min, int max) {
 
-        int randomNumber = (ThreadLocalRandom.current().nextInt(max - min + 1)) + 1;
+        int randomNumber = (ThreadLocalRandom.current().nextInt(max - min +1));
         return randomNumber;
     }
 

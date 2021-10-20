@@ -21,7 +21,16 @@ public class Monster extends AbstractFighter{
     }
 
     @Override
-    public void attack(Fighter attacker, Fighter opponent) {
+    public void attack(Fighter attacker, Fighter opponent){
+        opponent.defend(this.getDamage());
+        System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
+    }
 
+    @Override
+    public int getMp() {
+        return 0;
+    }
+    @Override
+    public void setMp(int mp) {
     }
 }

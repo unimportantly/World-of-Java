@@ -1,5 +1,7 @@
 package attacks;
 
+import fighters.Fighter;
+
 public class Ultima extends MagicAttack{
 
     //attributes
@@ -10,7 +12,11 @@ public class Ultima extends MagicAttack{
         this.mpCost = 100;
     }
     //methods
+    public int launchAttack(Fighter attacker) {
+        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
 
+        return damage;
+    }
 
     @Override
     public String toString() {

@@ -39,12 +39,17 @@ public class Character extends AbstractFighter {
                 System.out.println(attacker.getName() + " uses " + skillPicked);
                 this.mp = attacker.getMp() - skillPicked.getMpCost();
                 opponent.defend(skillPicked.launchAttack(attacker));
-                System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
+                System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + (skillPicked.launchAttack(attacker)) + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
                 System.out.println(attacker);
                 skillUsed ++;
             }
         }
     }
+    public void defend(int damage){
+        this.setHp(this.getHp() - damage);
+    }
+
+
     //g&s
     public Classable getAClass() {
         return aClass;

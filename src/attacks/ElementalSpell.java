@@ -1,5 +1,7 @@
 package attacks;
 
+import fighters.Fighter;
+
 public class ElementalSpell extends MagicAttack{
 
     //attributes
@@ -10,7 +12,11 @@ public class ElementalSpell extends MagicAttack{
         this.mpCost = 50;
     }
     //methods
+    public int launchAttack(Fighter attacker) {
+        int damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
 
+        return damage;
+    }
     //g&s
 
 

@@ -25,6 +25,9 @@ public class Monster extends AbstractFighter{
         opponent.defend(this.getDamage());
         System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + this.getDamage() + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
     }
+    public void defend(int damage){
+        this.setHp(this.getHp() - damage);
+    }
 
     @Override
     public int getMp() {

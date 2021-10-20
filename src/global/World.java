@@ -1,4 +1,5 @@
 package global;
+import classes.Classable;
 import fighters.Character;
 import fighters.Fighter;
 import fighters.Monster;
@@ -19,7 +20,9 @@ public abstract class World {
      * @return created character
      */
     public static Character characterFactory() {
-        Character character = new Character(Tools.generateRandomInt() + 100, Tools.generateRandomInt() + 50, Tools.generateRandomInt(),Tools.inputString("please enter your character's name"), Tools.choseClass());
+        Character character = new Character((Tools.generateRandomInt() + 100), Tools.generateRandomInt() + 50, Tools.generateRandomInt(),Tools.inputString("please enter your character's name"), Tools.choseClass());
+        character.setHp(character.getHp() + character.getAClass().getHpModifier());
+        character.setMp(character.getMp() + character.getAClass().getMpModifier());
         System.out.println(character);
         return character;
     }

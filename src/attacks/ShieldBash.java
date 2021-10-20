@@ -1,5 +1,8 @@
 package attacks;
 
+import fighters.Fighter;
+import global.Tools;
+
 public class ShieldBash extends MeleeAttack{
 
     //attributes
@@ -12,7 +15,17 @@ public class ShieldBash extends MeleeAttack{
     }
     //methods
         //TODO implement a way to stun
-
+    public int launchAttack(Fighter attacker) {
+        int damage = 0;
+        if (chanceToHit > Tools.generateRandomInt()){
+            System.out.println("The attack lands!");
+            damage = (attacker.getDamage());
+        } else{
+            System.out.println("The attack was evaded!");
+            damage = 0;
+        }
+        return damage;
+    }
     //g&s
 
 

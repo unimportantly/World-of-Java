@@ -1,5 +1,8 @@
 package attacks;
 
+import fighters.Fighter;
+import global.Tools;
+
 public class SneakAttack extends MeleeAttack{
 
     //attributes
@@ -11,7 +14,18 @@ public class SneakAttack extends MeleeAttack{
         this.mpCost = 50;
     }
     //methods
+    public int launchAttack(Fighter attacker) {
+        int damage = 0;
+        if (chanceToHit > Tools.generateRandomInt()){
+            System.out.println("The attack lands!");
+            damage = (int)Math.round(attacker.getDamage() * this.damageModifier / 100);
 
+        } else{
+            System.out.println("The attack was evaded!");
+            damage = 0;
+        }
+        return damage;
+    }
 
     //g&s
 

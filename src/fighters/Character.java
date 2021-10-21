@@ -16,7 +16,7 @@ public class Character extends AbstractFighter {
     public Character(int hp, int mp, int damage, String name, Classable aClass) {
         super(hp, damage, name);
         this.mp = mp;
-        setAClass(aClass);
+        this.setAClass(aClass);
     }
 
     //methods

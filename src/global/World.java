@@ -36,10 +36,10 @@ public abstract class World {
      * create a group of characters
      * @return a group of characters
      */
-    public static Group groupCharacterFactory(int numberOfPeopleInGroup){
-        Group characterGroup = null;
-        for (int i = 0; i > numberOfPeopleInGroup; i++){
-            characterGroup.addFighter(characterFactory());
+    public static List<Fighter> groupCharacterFactory(int numberOfPeopleInGroup){
+        List<Fighter> characterGroup = new ArrayList<>();
+        for (int i = 0; i < numberOfPeopleInGroup; i++){
+            characterGroup.add(characterFactory());
         }
         return characterGroup;
     }
@@ -57,10 +57,10 @@ public abstract class World {
      * create a group of monsters
      * @return a group of monsters
      */
-    public static Group groupMonsterFactory(int numberOfMonstersInGroup){
-        Group monsterGroup = null;
-        for (int i = 0; i > numberOfMonstersInGroup; i++){
-            monsterGroup.addFighter(monsterFactory());
+    public static List<Fighter> groupMonsterFactory(int numberOfMonstersInGroup){
+        List<Fighter> monsterGroup = new ArrayList<>();
+        for (int i = 0; i < numberOfMonstersInGroup; i++){
+            monsterGroup.add(monsterFactory());
         }
         return monsterGroup;
     }
@@ -76,7 +76,7 @@ public abstract class World {
      * @param fighter1 & fighter2 & etc?
      */
     public static void fight(Group fighter1, Group fighter2) {
-        while (!fighter1.isDead() && !fighter2.isDead()) {
+        while (fighter1.isDead() == false && fighter2.isDead() == false) {
             fighter1.attack(fighter1, fighter2);
             //checks if second fighter is alive to attack
             if (!fighter2.isDead()) {

@@ -1,5 +1,6 @@
 package global;
 import classes.*;
+import fighters.Fighter;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -18,7 +19,7 @@ public class Tools {
 
     //generate a random int between 1 & 100
     public static int generateRandomInt() {
-        int randomNumber = (int)Math.round(Math.random()*100);
+        int randomNumber = (int)(Math.random()*100);
         return randomNumber;
     }
 
@@ -50,6 +51,7 @@ public class Tools {
      */
     public static Classable choseClass() {
         Classable chosenClass = null;
+
         while (chosenClass == null) {
             String classPick = Tools.inputString("Please pick a class between warrior, mage, thief and priest");
             if (classPick.toLowerCase(Locale.ROOT).equals("warrior")) {
@@ -71,4 +73,7 @@ public class Tools {
         System.out.println(chosenClass.toString());
         return chosenClass;
     }
+
+
+
 }

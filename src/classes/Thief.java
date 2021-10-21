@@ -21,6 +21,10 @@ public class Thief extends MeleeClass {
     }
 
     //methods
+    /**
+     * pick an attack at random from the list provided by the classes
+     * @return attack picked
+     */
     @Override
     public Attack getAttack(){
         int index = Tools.generateRandom(0,this.attacks.length -1);

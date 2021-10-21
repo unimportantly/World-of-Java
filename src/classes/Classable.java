@@ -3,6 +3,8 @@ package classes;
 import attacks.Attack;
 import fighters.Fighter;
 
+import java.util.List;
+
 public interface Classable {
 
     //methods

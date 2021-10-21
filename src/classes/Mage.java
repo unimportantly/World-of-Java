@@ -4,7 +4,9 @@ import attacks.*;
 import fighters.Fighter;
 import global.Tools;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Mage extends MagicClass {
 
@@ -15,11 +17,20 @@ public class Mage extends MagicClass {
     public Mage() {
         super();
     }
-    public Mage(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] mageAttacks) {
+//    public Mage(int chanceToHitModifier, int mpModifier, int hpModifier, Attack[] mageAttacks) {
+//        super(chanceToHitModifier, mpModifier, hpModifier);
+//        this.attacks = attacks;
+//    }
+
+    public Mage(int chanceToHitModifier, int mpModifier, int hpModifier) {
         super(chanceToHitModifier, mpModifier, hpModifier);
-        this.attacks = attacks;
     }
+
     //methods
+    /**
+     * pick an attack at random from the list provided by the classes
+     * @return attack picked
+     */
     @Override
     public Attack getAttack(){
         int index = Tools.generateRandom(0,this.attacks.length - 1);
@@ -27,12 +38,7 @@ public class Mage extends MagicClass {
         return attack;
     }
     //g&s
-    public Attack[] getMageAttacks() {
-        return attacks;
-    }
-    public void setMageAttacks(Attack[] mageAttacks) {
-        this.attacks = mageAttacks;
-    }
+
 
     @Override
     public String toString() {
@@ -41,5 +47,6 @@ public class Mage extends MagicClass {
         sb.append(". Mage's attacks: " + Arrays.toString(attacks));
         return sb.toString();
     }
+
 
 }

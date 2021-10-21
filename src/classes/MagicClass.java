@@ -3,13 +3,16 @@ package classes;
 import attacks.Attack;
 import global.Tools;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class MagicClass implements Classable {
 
     //attributes
     private int chanceToHitModifier = 80;
-    private int mpModifier = +100;
+    private int mpModifier = 80;
     private int hpModifier = -30;
-    private Attack[] attacks;
+    protected Attack[] attacks;
 
     //constructors
     public MagicClass(){}
@@ -20,6 +23,10 @@ public abstract class MagicClass implements Classable {
     }
 
     //methods
+    /**
+     * pick an attack at random from the list provided by the classes
+     * @return attack picked
+     */
     public Attack getAttack(){
         int index = Tools.generateRandom(0,this.attacks.length);
         Attack attack = this.attacks[index];
@@ -49,7 +56,6 @@ public abstract class MagicClass implements Classable {
     public Attack[] getAttacks() {
         return attacks;
     }
-    @Override
     public void setAttacks(Attack[] attacks) {
         this.attacks = attacks;
     }

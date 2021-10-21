@@ -24,8 +24,7 @@ public class BasicAttack implements Attack {
                 System.out.println("The attack lands!");
                 damage = (attacker.getDamage() * this.damageModifier / 100);
             } else {
-                System.out.println("The attack was evaded!");
-                damage = 0;
+              System.out.println("The attack was evaded!");
             }return damage;
         }
 

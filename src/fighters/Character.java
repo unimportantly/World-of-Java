@@ -10,14 +10,13 @@ import classes.Classable;
 public class Character extends AbstractFighter {
 
     //attributes
-    private int mp;
     Classable aClass;
 
     //constructor
     public Character(int hp, int mp, int damage, String name, Classable aClass) {
         super(hp, damage, name);
         this.mp = mp;
-        this.aClass = aClass;
+        setAClass(aClass);
     }
 
     //methods
@@ -32,6 +31,7 @@ public class Character extends AbstractFighter {
         Attack skillPicked = this.aClass.getAttack();
         int skillUsed = 0;
         while (skillUsed == 0) {
+            //check if skill can be used
             if (attacker.getMp() < skillPicked.getMpCost()) {
                 System.out.println("you don't have enough mp to use that skill!");
                 skillPicked = this.aClass.getAttack();
@@ -39,7 +39,9 @@ public class Character extends AbstractFighter {
                 System.out.println(attacker.getName() + " uses " + skillPicked);
                 this.mp = attacker.getMp() - skillPicked.getMpCost();
                 opponent.defend(skillPicked.launchAttack(attacker));
-                System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for " + (skillPicked.launchAttack(attacker)) + " points. " + opponent.getName() + " has " + opponent.getHp() + " left.");
+                System.out.println(this.getName() + "'s attack hit " + opponent.getName() + " for "
+                        + (skillPicked.launchAttack(attacker)) + " points. " + opponent.getName() + " has "
+                        + opponent.getHp() + " left.");
                 skillUsed ++;
             }
         }
@@ -55,13 +57,6 @@ public class Character extends AbstractFighter {
     }
     public void setAClass(Classable aClass) {
         this.aClass = aClass;
-    }
-    @Override
-    public int getMp() {
-        return this.mp;
-    }
-    @Override
-    public void setMp(int mp) {
     }
 
     @Override

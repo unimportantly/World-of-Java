@@ -3,13 +3,16 @@ package classes;
 import attacks.Attack;
 import global.Tools;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class MeleeClass implements Classable {
 
     //attributes
     private int chanceToHitModifier = 120;
     private int mpModifier = -30;
     private int hpModifier = +50;
-    private Attack[] attacks;
+    protected Attack[] attacks;
 
     //constructors
     public MeleeClass(){}
@@ -17,12 +20,14 @@ public abstract class MeleeClass implements Classable {
         this.chanceToHitModifier = chanceToHitModifier;
         this.mpModifier = mpModifier;
         this.hpModifier = hpModifier;
+
     }
 
 
     //methods
     /**
-     * get a random attack from the generated list
+     * pick an attack at random from the list provided by the classes
+     * @return attack picked
      */
     public Attack getAttack(){
         int index = Tools.generateRandom(0,this.attacks.length);
@@ -53,14 +58,13 @@ public abstract class MeleeClass implements Classable {
     public Attack[] getAttacks() {
         return attacks;
     }
-    @Override
     public void setAttacks(Attack[] attacks) {
         this.attacks = attacks;
     }
 
     @Override
     public String toString() {
-        return "MagicClass: " +
+        return "MeleeClass: " +
                 "chanceToHitModifier: " + chanceToHitModifier +
                 ", mpModifier: " + mpModifier +
                 ", hpModifier: " + hpModifier;

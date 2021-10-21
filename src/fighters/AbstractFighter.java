@@ -13,6 +13,7 @@ public abstract class AbstractFighter implements Fighter{
     protected int hp;
     protected int damage;
     protected String name;
+    protected int mp;
 
     //constructors
     public AbstractFighter() {
@@ -62,4 +63,7 @@ public abstract class AbstractFighter implements Fighter{
     public void setDamage(int damage) {
         this.damage = damage;
     }
+    public int getMp() { return this.mp;}
+    public void setMp(int mp) { this.mp = mp;}
+
 }
